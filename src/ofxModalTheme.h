@@ -31,6 +31,11 @@ class ofxModalTheme {
     public:
     
         ofxModalTheme(){
+
+        }
+
+        void setup()
+        {
             buttonX.normal.load("ofxbraitsch/ofxmodal/modal-buttonX.png");
             buttonX.active.load("ofxbraitsch/ofxmodal/modal-buttonX-hover.png");
             fonts.title = ofxSmartFont::add("ofxbraitsch/fonts/HelveticaNeueLTStd-Md.otf", 24, "modal-title");

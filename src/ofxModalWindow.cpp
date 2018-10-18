@@ -117,6 +117,7 @@ void ofxModalWindow::setAlert(shared_ptr<ofxModalAlert> alert)
 void ofxModalWindow::setTheme(std::shared_ptr<ofxModalTheme> theme)
 {
     mTheme = theme;
+    theme->setup();
     mColor.title = theme->color.text.title;
     mColor.header = theme->color.modal.header;
     mColor.body = theme->color.modal.body;
@@ -191,10 +192,10 @@ ofxModalWindow::ofxModalWindow()
     mCancelable = true;
     mCloseButton.mouseOver = false;
     if (mTheme == nullptr) mTheme = std::make_shared<ofxModalTheme>();
-    setTheme(mTheme);
-    setTitle("Title");
-    addButton("Close");
-    setTheme(mTheme);
+    //setTheme(mTheme);
+    //setTitle("Title");
+    //addButton("Close");
+    //setTheme(mTheme);
     modals.push_back(this);
 }
 

@@ -45,6 +45,8 @@ class ofxModalWindow {
         void setButtonLabel(string label, int bIndex = 0);
         void setAlert(shared_ptr<ofxModalAlert> alert);
         void setCancelable(bool cancelable);
+
+        virtual void setup(){}
         virtual void setTheme(std::shared_ptr<ofxModalTheme> theme);
     
         int getWidth();
@@ -275,7 +277,13 @@ class ofxModalAlert : public ofxModalWindow {
 
         ofxModalAlert()
         {
+
+        }
+
+        void setup()
+        {
             setTitle("alert");
+            addButton("Close");
             getButton(0)->setLabel("ok");
             setTheme(mTheme);
             setCancelable(false);

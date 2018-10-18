@@ -29,7 +29,13 @@ class ofxModalConfirm : public ofxModalWindow {
 
         ofxModalConfirm()
         {
+
+        }
+
+        void setup()
+        {
             setTitle("confirm");
+            addButton("Close");
             addButton("cancel");
             getButton(0)->setLabel("confirm");
             setTheme(mTheme);
