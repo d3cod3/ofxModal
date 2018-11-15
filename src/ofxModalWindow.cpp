@@ -195,7 +195,7 @@ ofxModalWindow::ofxModalWindow()
     //setTheme(mTheme);
     //setTitle("Title");
     //addButton("Close");
-    //setTheme(mTheme);
+    setTheme(mTheme);
     modals.push_back(this);
 }
 
